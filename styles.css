@@ -26,8 +26,32 @@ body {
 header {
     background: var(--primary-color);
     color: var(--white);
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    text-align: left;
 }
 
 header h1 {
@@ -37,9 +61,10 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-.slogan {
+.sublogo {
     font-style: italic;
     opacity: 0.9;
+    font-size: 1.1rem;
 }
 
 .hero {
@@ -328,6 +353,21 @@ footer {
     gap: 1.5rem;
 }
 
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    max-height: 60px;
+    width: auto;
+}
+
 .footer-info h3 {
     margin-bottom: 0.5rem;
 }
@@ -385,6 +425,15 @@ footer {
         max-width: 90%;
     }
     
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-text {
+        text-align: center;
+    }
+    
     .products {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 20px;
@@ -432,6 +481,10 @@ footer {
         padding: 1rem;
     }
     
+    .logo-img {
+        max-height: 60px;
+    }
+    
     .carousel {
         border-radius: 10px;
     }
@@ -461,5 +514,9 @@ footer {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
+    }
+    
+    .footer-logo-img {
+        max-height: 50px;
     }
 }
